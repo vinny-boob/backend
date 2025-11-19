@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>student details</thead>
+        <tr>
+            <th>first name</th>
+            <th>last name</th>
+            <th>email</th>
+            <th>age</th>
+            <th>registration number</th>
+            <th>action</th>
+        </tr>
+        {% for data in std_data %}
+        <tr>
+            <td>{{data.firstname}}</td>
+            <td>{{data.lastname}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.regno}}</td>
+            <td><a href="{% url 'updatestd' data.pk %}">update</a>
+             <a href="{% url 'deletestd' data.pk %}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

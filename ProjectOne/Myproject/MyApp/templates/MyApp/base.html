@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    .container{
+        background-color: burlywood;
+    }
+    ul{
+        display: inline;
+    }
+    ul li{
+        display: inline-flex;
+        padding: 30px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <header>
+             <dv class="container">
+                 <nav>
+                     <ul class="nav_links">
+                         <li><a href="{% url 'home' %}">HOME</a></li>
+                         <li><a href="{% url 'regist_std' %}">REGISTER STUDENT</a></li>
+                        <li><a href="{% url 'fetch_std' %}">STUDENT DETAILS</a></li>
+                        <li><a href="{% url 'login' %}">SIGN IN</a></li>
+                        <li><a href="{% url 'logout' %}">SIGN UP</a></li>
+                        </ul>
+                    </nav>
+            </dv>  
+        </header>
+        {% block content %}
+
+        {% endblock %}
+    
+</body>
+</html>
